@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sanchi Foundation & Sanchaya — Annual Report 2022–2025. Three years of archiving Karnataka's cultural and literary heritage.">
+<title>Sanchi Foundation & Sanchaya · Annual Report 2022–2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root{
+  --red:#B91C1C; --red-lt:#FEE2E2;
+  --pink:#BE185D; --violet:#6D28D9;
+  --grad:linear-gradient(135deg,#BE185D 0%,#7C3AED 100%);
+  --bg:#FFFBF7; --bg2:#FFF4EE; --bg3:#F5F0FF;
+  --ink:#1C1917; --muted:#6B5B45; --border:rgba(0,0,0,0.08);
+  --white:#FFFFFF;
+  --r:22px;
+  --shadow-sm:0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:0 8px 32px rgba(0,0,0,0.10);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+
+/* fluid blobs */
+.blob{position:absolute;border-radius:60% 40% 70% 30%/50% 60% 40% 50%;filter:blur(72px);opacity:.16;pointer-events:none;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,251,247,0.93);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:64px;}
+.nav-logos{display:flex;align-items:center;gap:18px;}
+.nav-logos img{height:30px;}
+.nav-sep{width:1px;height:22px;background:rgba(0,0,0,0.13);}
+.nav-links{display:flex;gap:24px;}
+.nav-links a{color:var(--muted);font-size:.8rem;text-decoration:none;letter-spacing:.04em;font-weight:500;transition:color .2s;}
+.nav-links a:hover{color:var(--red);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-cta{background:var(--red);color:#fff;font-size:.8rem;font-weight:600;padding:8px 20px;border-radius:100px;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:#DC2626;}
+.lang-pill{border:1.5px solid var(--border);border-radius:100px;padding:6px 14px;font-size:.75rem;font-weight:600;color:var(--muted);background:transparent;cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;text-decoration:none;display:inline-block;}
+.lang-pill:hover{border-color:var(--red);color:var(--red);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;padding:120px 48px 100px;background:linear-gradient(160deg,#FFF0EC 0%,#FFF8F5 35%,#F5F0FF 75%,#FDFBFF 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;}
+.hero-logos{display:flex;align-items:center;justify-content:center;gap:32px;margin-bottom:48px;position:relative;}
+.hero-logos img{height:54px;}
+.logo-x{color:rgba(0,0,0,0.18);font-size:.9rem;font-weight:300;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;font-size:.7rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);}
+.eyebrow::before,.eyebrow::after{content:'';width:36px;height:1px;background:currentColor;opacity:.4;}
+h1.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);line-height:1.08;max-width:840px;margin-bottom:22px;position:relative;}
+.t-red{color:var(--red);}
+.t-grad{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(.95rem,1.6vw,1.15rem);color:var(--muted);margin-bottom:56px;position:relative;}
+.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:0;background:rgba(255,255,255,0.75);backdrop-filter:blur(12px);border:1px solid rgba(185,28,28,0.14);border-radius:20px;box-shadow:var(--shadow-md);overflow:hidden;position:relative;}
+.hstat{padding:28px 36px;text-align:center;border-right:1px solid var(--border);}
+.hstat:last-child{border-right:none;}
+.hstat .n{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,2.8vw,2.6rem);display:block;line-height:1;margin-bottom:6px;}
+.hstat .l{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:.65rem;text-transform:uppercase;letter-spacing:.22em;opacity:.45;}
+.scroll-hint::after{content:'';display:block;width:1px;height:36px;background:linear-gradient(to bottom,var(--red),transparent);margin:10px auto 0;}
+
+/* ── SHARED ── */
+.wrap{max-width:1100px;margin:0 auto;}
+.sec{padding:88px 48px;}
+.label{font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px;display:block;}
+.label-r{color:var(--red);}
+.label-p{color:var(--pink);}
+.label-m{color:var(--muted);}
+h2.ttl{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.18;margin-bottom:16px;}
+.body-txt{font-size:1rem;color:var(--muted);line-height:1.82;max-width:660px;}
+hr.div{border:none;border-top:1px solid var(--border);max-width:1100px;margin:0 auto;}
+
+/* ── WHO WE ARE ── */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px;}
+.org{border-radius:var(--r);padding:42px 38px;position:relative;overflow:hidden;}
+.org.sanchi{background:linear-gradient(148deg,#FFF0EC,#FFFAF8);border:1.5px solid rgba(185,28,28,0.13);}
+.org.sanchaya{background:linear-gradient(148deg,#F5F0FF,#FFF0F9);border:1.5px solid rgba(124,58,237,0.13);}
+.org::before{content:'';position:absolute;bottom:-40px;right:-40px;width:160px;height:160px;border-radius:50%;opacity:.08;}
+.org.sanchi::before{background:var(--red);}
+.org.sanchaya::before{background:var(--violet);}
+.org-logo{height:42px;margin-bottom:22px;display:block;}
+.org h3{font-family:'Playfair Display',serif;font-size:1.28rem;margin-bottom:12px;}
+.org.sanchi h3{color:#7F1D1D;}
+.org.sanchaya h3{color:#4C1D95;}
+.org p{font-size:.93rem;color:var(--muted);line-height:1.78;margin-bottom:18px;}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;}
+.tag{font-size:.7rem;font-weight:500;padding:5px 13px;border-radius:100px;}
+.tag-r{background:rgba(185,28,28,0.09);color:var(--red);}
+.tag-p{background:rgba(124,58,237,0.09);color:#5B21B6;}
+.wing{position:absolute;top:20px;right:20px;font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:4px 11px;border-radius:100px;}
+.wing-r{background:var(--red);color:#fff;}
+.wing-p{background:var(--grad);color:#fff;}
+
+/* ── IMPACT BAR ── */
+.impact-bar{background:linear-gradient(to right,#FFF0EC,#F5F0FF);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px;}
+.impact-grid{display:grid;grid-template-columns:repeat(5,1fr);max-width:1100px;margin:0 auto;}
+.iitem{text-align:center;padding:14px 10px;border-right:1px solid var(--border);}
+.iitem:last-child{border-right:none;}
+.iitem .big{font-family:'Playfair Display',serif;font-size:2.4rem;display:block;line-height:1;margin-bottom:7px;}
+.iitem:nth-child(1) .big,.iitem:nth-child(4) .big{color:var(--red);}
+.iitem:nth-child(2) .big,.iitem:nth-child(5) .big{color:var(--pink);}
+.iitem:nth-child(3) .big{color:var(--violet);}
+.iitem .lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;line-height:1.5;}
+
+/* ── TIMELINE ── */
+.timeline-bg{background:linear-gradient(160deg,#1A0808 0%,#160A2A 100%);padding:88px 0;position:relative;overflow:hidden;}
+.timeline-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 15% 50%,rgba(185,28,28,.18) 0%,transparent 70%),radial-gradient(ellipse 60% 70% at 85% 50%,rgba(109,40,217,.18) 0%,transparent 70%);pointer-events:none;}
+.years{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;}
+.ycard{border-radius:20px;padding:34px 30px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);position:relative;overflow:hidden;transition:background .25s;}
+.ycard:hover{background:rgba(255,255,255,0.07);}
+.ycard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.y1::before{background:linear-gradient(to right,#B91C1C,#F87171);}
+.y2::before{background:linear-gradient(to right,#BE185D,#F472B6);}
+.y3::before{background:var(--grad);}
+.yn{font-family:'Playfair Display',serif;font-size:1.9rem;color:#fff;margin-bottom:4px;}
+.yt{font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:rgba(255,255,255,.35);margin-bottom:22px;display:block;}
+.ybadges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px;}
+.ybadge{background:rgba(255,255,255,0.07);border-radius:10px;padding:10px 14px;text-align:center;}
+.ybadge .bn{font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;display:block;line-height:1;}
+.ybadge .bl{font-size:.6rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;}
+.ylist{list-style:none;}
+.ylist li{font-size:.86rem;color:rgba(255,255,255,.58);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;gap:10px;align-items:flex-start;line-height:1.55;}
+.ylist li:last-child{border-bottom:none;}
+.ylist li::before{content:'▸';flex-shrink:0;margin-top:1px;}
+.y1 .ylist li::before{color:#F87171;}
+.y2 .ylist li::before{color:#F472B6;}
+.y3 .ylist li::before{color:#A78BFA;}
+
+/* ── VIDEOS ── */
+.video-bg{background:linear-gradient(160deg,#FFF0EC 0%,#FFFAF8 100%);padding:88px 0;}
+.podium{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;margin-bottom:56px;}
+.pcard{border-radius:18px;padding:30px 26px;border:1.5px solid var(--border);background:#fff;transition:all .25s;}
+.pcard:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.pcard.gold{background:linear-gradient(148deg,#FFFBEB,#FFF8D6);border-color:rgba(217,119,6,.3);}
+.medal{font-size:1.9rem;display:block;margin-bottom:12px;}
+.pcard h3{font-family:'Playfair Display',serif;font-size:1.05rem;margin-bottom:7px;}
+.pcard .psub{font-size:.8rem;color:var(--muted);margin-bottom:18px;line-height:1.5;}
+.pcard .vn{font-family:'Playfair Display',serif;font-size:2.1rem;color:var(--red);display:block;line-height:1;}
+.pcard .vl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;}
+.yt-link{display:inline-block;margin-top:14px;font-size:.76rem;font-weight:600;color:var(--red);text-decoration:none;transition:opacity .2s;}
+.yt-link:hover{opacity:.7;}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:13px;margin-top:12px;}
+.vcard{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;text-decoration:none;color:inherit;transition:all .22s;}
+.vcard:hover{border-color:var(--red);box-shadow:0 4px 20px rgba(185,28,28,.09);transform:translateY(-2px);}
+.vico{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.vico-r{background:rgba(185,28,28,0.09);}
+.vico-p{background:rgba(190,24,93,0.09);}
+.vico-v{background:rgba(109,40,217,0.09);}
+.vico-g{background:rgba(5,150,105,0.09);}
+.vtit{font-size:.86rem;font-weight:500;line-height:1.42;color:var(--ink);margin-bottom:3px;}
+.vmeta{font-size:.72rem;color:var(--muted);}
+.cat-head{font-size:.88rem;color:var(--muted);margin:28px 0 14px;font-weight:500;}
+.artist-wall{display:flex;flex-wrap:wrap;gap:9px;margin-top:32px;}
+.apill{border-radius:100px;padding:8px 16px;font-size:.84rem;font-weight:500;background:#fff;border:1px solid var(--border);color:var(--ink);transition:all .2s;}
+.apill:hover{border-color:var(--red);color:var(--red);}
+
+/* ── PORTALS ── */
+.portals-bg{background:linear-gradient(160deg,#F5F0FF 0%,#FFF0F9 100%);padding:88px 0;}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(315px,1fr));gap:20px;margin-top:48px;}
+.pportal{background:#fff;border-radius:18px;border:1.5px solid rgba(124,58,237,0.11);padding:28px 26px;transition:all .22s;}
+.pportal:hover{border-color:rgba(124,58,237,.3);box-shadow:0 6px 28px rgba(124,58,237,.08);}
+.pportal h3{font-size:.97rem;font-weight:600;margin-bottom:9px;color:var(--ink);}
+.pportal p{font-size:.86rem;color:var(--muted);line-height:1.68;margin-bottom:15px;}
+.llinks{display:flex;flex-wrap:wrap;gap:7px;}
+.ll{font-size:.74rem;font-weight:500;padding:5px 11px;border-radius:100px;background:rgba(109,40,217,.07);color:#5B21B6;text-decoration:none;border:1px solid rgba(109,40,217,.17);transition:all .2s;}
+.ll:hover{background:var(--grad);color:#fff;border-color:transparent;}
+.ll-r{background:rgba(185,28,28,.07);color:var(--red);border-color:rgba(185,28,28,.17);}
+.ll-r:hover{background:var(--red);color:#fff;border-color:transparent;}
+.ll-gh{background:rgba(0,0,0,.04);color:#374151;border-color:rgba(0,0,0,.11);}
+.ll-gh:hover{background:#1F2937;color:#fff;border-color:transparent;}
+
+/* ── CONTRIBUTION ── */
+.contrib-bg{background:linear-gradient(160deg,#FFF7F0 0%,#F3EEFF 100%);padding:88px 0;}
+.contrib-intro{max-width:620px;margin-bottom:60px;}
+.contrib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:24px;}
+.ccard{border-radius:22px;padding:38px 34px;background:#fff;position:relative;overflow:hidden;border:1.5px solid var(--border);transition:all .25s;}
+.ccard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.ccard::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;}
+.cc1::before{background:linear-gradient(to right,#B91C1C,#F87171);}
+.cc2::before{background:linear-gradient(to right,#BE185D,#EC4899);}
+.cc3::before{background:var(--grad);}
+.cc4::before{background:linear-gradient(to right,#059669,#34D399);}
+.cc5::before{background:linear-gradient(to right,#D97706,#FCD34D);}
+.ccard::after{content:'';position:absolute;bottom:-30px;right:-30px;width:100px;height:100px;border-radius:50%;opacity:.06;}
+.cc1::after{background:var(--red);}
+.cc2::after{background:var(--pink);}
+.cc3::after{background:var(--violet);}
+.cc4::after{background:#059669;}
+.cc5::after{background:#D97706;}
+.cicon{font-size:2rem;margin-bottom:18px;display:block;}
+.ccard h3{font-family:'Playfair Display',serif;font-size:1.22rem;margin-bottom:11px;color:var(--ink);}
+.ccard .cdesc{font-size:.91rem;color:var(--muted);line-height:1.78;margin-bottom:20px;}
+.cwhat{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;margin-bottom:12px;color:var(--muted);}
+.clist{list-style:none;}
+.clist li{font-size:.86rem;color:var(--ink);padding:7px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;line-height:1.52;}
+.clist li:last-child{border-bottom:none;}
+.clist li::before{content:'✦';flex-shrink:0;font-size:.58rem;margin-top:4px;opacity:.55;}
+.cc1 .clist li::before{color:var(--red);}
+.cc2 .clist li::before{color:var(--pink);}
+.cc3 .clist li::before{color:var(--violet);}
+.cc4 .clist li::before{color:#059669;}
+.cc5 .clist li::before{color:#D97706;}
+.caction{display:inline-block;margin-top:20px;font-size:.8rem;font-weight:600;padding:10px 20px;border-radius:100px;text-decoration:none;border:1.5px solid currentColor;transition:all .2s;}
+.cc1 .caction{color:var(--red);}
+.cc1 .caction:hover{background:var(--red);color:#fff;}
+.cc2 .caction{color:var(--pink);}
+.cc2 .caction:hover{background:var(--pink);color:#fff;}
+.cc3 .caction{color:var(--violet);}
+.cc3 .caction:hover{background:var(--violet);color:#fff;}
+.cc4 .caction{color:#059669;}
+.cc4 .caction:hover{background:#059669;color:#fff;}
+.cc5 .caction{color:#D97706;}
+.cc5 .caction:hover{background:#D97706;color:#fff;}
+
+/* ── PARTNERS ── */
+.pwall{display:flex;flex-wrap:wrap;gap:10px;margin-top:38px;}
+.partner{background:#fff;border:1px solid var(--border);border-radius:12px;padding:11px 18px;font-size:.86rem;color:var(--ink);font-weight:500;transition:all .2s;}
+.partner:hover{border-color:rgba(185,28,28,.25);box-shadow:var(--shadow-sm);}
+
+/* ── DONATE ── */
+.donate-bg{background:linear-gradient(150deg,#160808 0%,#270A3C 100%);padding:110px 48px;position:relative;overflow:hidden;}
+.donate-bg::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 55% 65% at 8% 50%,rgba(185,28,28,.22) 0%,transparent 70%),radial-gradient(ellipse 55% 65% at 92% 50%,rgba(109,40,217,.22) 0%,transparent 70%);}
+.donate-inner{max-width:720px;margin:0 auto;text-align:center;position:relative;}
+.donate-inner .label{color:#FCA5A5;}
+.donate-inner h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);color:#fff;margin-bottom:20px;line-height:1.15;}
+.donate-inner p{color:rgba(255,255,255,.58);font-size:1rem;line-height:1.84;margin-bottom:52px;}
+.dbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-r{background:var(--red);color:#fff;font-weight:600;font-size:.92rem;padding:15px 32px;border-radius:100px;text-decoration:none;transition:all .22s;box-shadow:0 4px 20px rgba(185,28,28,.4);}
+.btn-r:hover{background:#DC2626;transform:translateY(-2px);}
+.btn-p{background:var(--grad);color:#fff;font-weight:600;font-size:.92rem;padding:15px 32px;border-radius:100px;text-decoration:none;transition:all .22s;box-shadow:0 4px 20px rgba(124,58,237,.4);}
+.btn-p:hover{opacity:.88;transform:translateY(-2px);}
+.btn-ow{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:.92rem;padding:15px 32px;border-radius:100px;text-decoration:none;transition:all .22s;}
+.btn-ow:hover{border-color:#fff;color:#fff;}
+.donate-note{margin-top:14px;font-size:.76rem;color:rgba(255,255,255,.28);}
+
+/* ── FOOTER ── */
+footer{background:#FFF4EE;border-top:1px solid rgba(185,28,28,0.1);padding:64px 48px 38px;}
+.foot-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
+.fbrand p{font-size:.84rem;color:var(--muted);line-height:1.74;}
+footer h4{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:rgba(0,0,0,.32);margin-bottom:14px;}
+footer ul{list-style:none;}
+footer ul li{margin-bottom:9px;}
+footer ul li a{color:var(--muted);text-decoration:none;font-size:.84rem;transition:color .2s;}
+footer ul li a:hover{color:var(--red);}
+.fbot{max-width:1100px;margin:0 auto;border-top:1px solid rgba(0,0,0,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:rgba(0,0,0,.32);flex-wrap:wrap;gap:10px;}
+.fbot a{color:var(--muted);text-decoration:none;}
+.fbot a:hover{color:var(--red);}
+.footer-logos{display:flex;align-items:center;gap:18px;margin-bottom:16px;flex-wrap:wrap;}
+.footer-logos img{height:36px;}
+.footer-logo-sep{width:1px;height:26px;background:rgba(0,0,0,.1);display:inline-block;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){.who-grid,.years,.podium{grid-template-columns:1fr;}.impact-grid{grid-template-columns:repeat(3,1fr);}.foot-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
+@media(max-width:600px){.sec{padding:60px 22px;}nav{padding:0 22px;}.hero{padding:100px 22px 80px;}.impact-grid{grid-template-columns:repeat(2,1fr);}.hstat{padding:18px 20px;}.donate-bg{padding:80px 22px;}footer{padding:48px 22px 28px;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logos">
+    <img src="https://sanchifoundation.org/storage/2021/03/sanchi-logo-transparent.png" alt="Sanchi Foundation">
+    <div class="nav-sep"></div>
+    <img src="https://sanchaya.org/storage/2022/07/Artboard-2.png" alt="Sanchaya">
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#videos">Videos</a>
+    <a href="#portals">Portals</a>
+    <a href="#contribute">Contribute</a>
+    <a href="#donate">Support</a>
+  </div>
+  <div class="nav-right">
+    <a href="index-kn.html" class="lang-pill">🌐 ಕನ್ನಡ</a>
+    <a href="#donate" class="nav-cta">Donate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="blob" style="width:520px;height:420px;top:-80px;left:-130px;background:var(--red);"></div>
+  <div class="blob" style="width:460px;height:380px;bottom:-60px;right:-110px;background:var(--violet);"></div>
+  <div class="blob" style="width:360px;height:300px;top:42%;left:58%;background:var(--pink);"></div>
+
+  <div class="hero-logos">
+    <img src="https://sanchifoundation.org/storage/2021/03/sanchi-logo-transparent.png" alt="Sanchi Foundation">
+    <span class="logo-x">×</span>
+    <img src="https://sanchaya.org/storage/2022/07/Artboard-2.png" alt="Sanchaya">
+  </div>
+  <span class="eyebrow">Annual Report · 2022–2025</span>
+  <h1 class="hero-h1">
+    Three Years of<br>
+    <span class="t-red">Archiving</span> &amp; <span class="t-grad">Preserving</span><br>
+    Karnataka's Heritage
+  </h1>
+  <p class="hero-tagline">
+    Sanchi Foundation <span style="font-style:normal;font-size:.78em;opacity:.65">(est. 2014)</span>
+    · Sanchaya <span style="font-style:normal;font-size:.78em;opacity:.65">(est. 2010)</span>
+    — two wings, one enduring mission
+  </p>
+  <div class="hero-stats">
+    <div class="hstat"><span class="n t-red">126</span><span class="l">Videos Documented</span></div>
+    <div class="hstat"><span class="n" style="color:var(--pink)">10+</span><span class="l">Author Archives</span></div>
+    <div class="hstat"><span class="n" style="color:var(--violet)">30+</span><span class="l">Live Portals</span></div>
+    <div class="hstat"><span class="n t-red">30K+</span><span class="l">Video Views</span></div>
+    <div class="hstat"><span class="n t-grad">15 yrs</span><span class="l">Sanchaya since 2010</span></div>
+  </div>
+  <div class="scroll-hint">Scroll to explore</div>
+</div>
+
+<!-- WHO WE ARE -->
+<div id="about" class="sec wrap">
+  <span class="label label-m">Who We Are</span>
+  <h2 class="ttl">Two Wings. One Mission.</h2>
+  <p class="body-txt">Sanchi Foundation and Sanchaya are sister organisations preserving Karnataka's cultural and literary heritage through technology — freely and forever.</p>
+  <div class="who-grid">
+    <div class="org sanchi">
+      <span class="wing wing-r">est. 2014</span>
+      <img class="org-logo" src="https://sanchifoundation.org/storage/2021/03/sanchi-logo-transparent.png" alt="Sanchi Foundation">
+      <h3>Sanchi Foundation</h3>
+      <p>India's grassroots cultural archiver, working since 2014. Sanchi documents live performances — Carnatic, Hindustani, Yakshagana, Theatre — and makes them freely accessible. Its mission: ensure every performance staged, every raga sung, every lecture delivered leaves a permanent digital trace.</p>
+      <div class="tag-row">
+        <span class="tag tag-r">Performance Documentation</span>
+        <span class="tag tag-r">Video Archive</span>
+        <span class="tag tag-r">Ninasam Partner</span>
+        <span class="tag tag-r">Cultural Preservation</span>
+      </div>
+    </div>
+    <div class="org sanchaya">
+      <span class="wing wing-p">est. 2010</span>
+      <img class="org-logo" src="https://sanchaya.org/storage/2022/07/Artboard-2.png" alt="Sanchaya">
+      <h3>Sanchaya (ಸಂಚಯ)</h3>
+      <p>Kannada's digital infrastructure builders, working since 2010. Sanchaya digitises literature, builds language-technology tools, revives historical typefaces, and creates open-access portals — ensuring Kannada thrives in the digital age for students, researchers, and the diaspora alike.</p>
+      <div class="tag-row">
+        <span class="tag tag-p">Book Digitisation</span>
+        <span class="tag tag-p">Font Revival</span>
+        <span class="tag tag-p">Open Portals</span>
+        <span class="tag tag-p">Language Technology</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="div">
+
+<!-- IMPACT BAR -->
+<div class="impact-bar">
+  <div class="impact-grid">
+    <div class="iitem"><span class="big">126</span><span class="lbl">Videos<br>Documented</span></div>
+    <div class="iitem"><span class="big">10+</span><span class="lbl">Author Archives<br>Digitised</span></div>
+    <div class="iitem"><span class="big">16+</span><span class="lbl">Author<br>Subdomains</span></div>
+    <div class="iitem"><span class="big">15+</span><span class="lbl">Magazine<br>Archives Live</span></div>
+    <div class="iitem"><span class="big">15 yrs</span><span class="lbl">Sanchaya<br>Since 2010</span></div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div id="work" class="timeline-bg">
+  <div class="sec wrap">
+    <span class="label" style="color:#FCA5A5;">Year by Year</span>
+    <h2 class="ttl" style="color:#fff;">Three Years, Steady Growth</h2>
+    <p class="body-txt" style="color:rgba(255,255,255,.48);">Each year expanded scope, deepened partnerships, and grew the open-access archive.</p>
+    <div class="years">
+      <div class="ycard y1">
+        <div class="yn">2022–23</div><span class="yt">Across Art Forms</span>
+        <div class="ybadges">
+          <div class="ybadge"><span class="bn">39</span><span class="bl">Videos</span></div>
+          <div class="ybadge"><span class="bn">7</span><span class="bl">Genres</span></div>
+        </div>
+        <ul class="ylist">
+          <li>Carnatic Vocal — T.M. Krishna documented</li>
+          <li>Hindustani — Rahul Deshpande (two concerts)</li>
+          <li>Theatre: Muktadhaara, Iphigenia, Coriolanus</li>
+          <li>URA Memorial Lecture — Pratap Bhanu Mehta</li>
+          <li>Yakshagana, Taalamaddale, Gamaka &amp; Kolata</li>
+        </ul>
+      </div>
+      <div class="ycard y2">
+        <div class="yn">2023–24</div><span class="yt">Expansion Year</span>
+        <div class="ybadges">
+          <div class="ybadge"><span class="bn">44</span><span class="bl">Videos</span></div>
+          <div class="ybadge"><span class="bn">6+</span><span class="bl">Archives</span></div>
+        </div>
+        <ul class="ylist">
+          <li>Personal archives: H.V. Venkatasubbiah, D.S. Nagabhushana &amp; 4 more</li>
+          <li>Ninasam Documents Archival launched</li>
+          <li>Shaili Sanchaya (Font Revival) Phase 1</li>
+          <li>fonts.sanchaya.net &amp; publishers.sanchaya.net live</li>
+          <li>Sanchaya Hejje 2012 tech archive recovered</li>
+        </ul>
+      </div>
+      <div class="ycard y3">
+        <div class="yn">2024–25</div><span class="yt">Growth Year</span>
+        <div class="ybadges">
+          <div class="ybadge"><span class="bn">43</span><span class="bl">Videos</span></div>
+          <div class="ybadge"><span class="bn">7+</span><span class="bl">New Portals</span></div>
+        </div>
+        <ul class="ylist">
+          <li>Odalaala — top video, 13,807 views</li>
+          <li>Hamlet — 10,686 views</li>
+          <li>Shaili Sanchaya Phase 2 underway</li>
+          <li>Anuvada Sanchaya portal initiated</li>
+          <li>Karnataka Archaeology Dept portal launched</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEOS -->
+<div id="videos" class="video-bg">
+  <div class="sec wrap">
+    <span class="label label-r">Audience Reach</span>
+    <h2 class="ttl">Our Most Celebrated Recordings</h2>
+    <p class="body-txt">Proof that when great art is made accessible, audiences everywhere find it.</p>
+    <div class="podium">
+      <div class="pcard gold">
+        <span class="medal">🥇</span>
+        <h3>ಒಡಲಾಳ | Odalaala</h3>
+        <p class="psub">Theatre · Ninasam Rangashikshana</p>
+        <span class="vn">13,807</span><span class="vl">YouTube Views</span>
+        <a href="https://www.youtube.com/watch?v=zNiJxHfyRNU" target="_blank" class="yt-link">▶ Watch →</a>
+      </div>
+      <div class="pcard">
+        <span class="medal">🥈</span>
+        <h3>ಹ್ಯಾಮ್ಲೆಟ್ | Hamlet</h3>
+        <p class="psub">Theatre · Ninasam Rangashikshana</p>
+        <span class="vn">10,686</span><span class="vl">YouTube Views</span>
+        <a href="https://www.youtube.com/watch?v=fp5yBOxtmE8" target="_blank" class="yt-link">▶ Watch →</a>
+      </div>
+      <div class="pcard">
+        <span class="medal">🥉</span>
+        <h3>ತಾಳಮದ್ದಲೆ – ಶಲ್ಯ ಸಾರಥ್ಯ</h3>
+        <p class="psub">Taalamaddale · Classical Performance</p>
+        <span class="vn">7,450</span><span class="vl">YouTube Views</span>
+        <a href="https://www.youtube.com/watch?v=OgHqGJMvceM" target="_blank" class="yt-link">▶ Watch →</a>
+      </div>
+    </div>
+    <p class="label label-r" style="margin-bottom:4px;">Browse by Category</p>
+    <p class="cat-head">🎭 <strong>Theatre</strong></p>
+    <div class="vgrid">
+      <a href="https://www.youtube.com/watch?v=zNiJxHfyRNU" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">ಒಡಲಾಳ | Odalaala</div><div class="vmeta">Theatre · 13,807 views</div></div></a>
+      <a href="https://www.youtube.com/watch?v=fp5yBOxtmE8" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">ಹ್ಯಾಮ್ಲೆಟ್ | Hamlet</div><div class="vmeta">Theatre · 10,686 views</div></div></a>
+      <a href="https://www.youtube.com/watch?v=zB1gknascNM" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">ಹಬ್ಬದ ಹನ್ನೆರಡನೆಯ ರಾತ್ರಿ</div><div class="vmeta">Theatre · Ninasam 2024</div></div></a>
+      <a href="https://www.youtube.com/watch?v=p-k8C-U92oA" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">ಮದರ್ ಕರೇಜ್ | Mother Courage</div><div class="vmeta">Theatre · Ninasam</div></div></a>
+      <a href="https://www.youtube.com/watch?v=gZ3GlcFBuEQ" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">ಬ್ಲಡ್ ವೆಡ್ಡಿಂಗ್ | Blood Wedding</div><div class="vmeta">Theatre · Ninasam</div></div></a>
+      <a href="https://www.youtube.com/watch?v=TV8AQVXfEEI" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">Muktadhaara | ಮುಕ್ತಧಾರಾ</div><div class="vmeta">Theatre · 2022–23</div></div></a>
+      <a href="https://www.youtube.com/watch?v=KWDKLR9CwI8" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">Iphigenia | ಇಫಿಜೀನಿಯಾ</div><div class="vmeta">Theatre · 2022–23</div></div></a>
+      <a href="https://www.youtube.com/watch?v=Tm0b0pwFMb4" target="_blank" class="vcard"><div class="vico vico-r">🎭</div><div><div class="vtit">Coriolanus | ಕೋರಿಯೋಲೇನಸ್</div><div class="vmeta">Theatre · 2022–23</div></div></a>
+    </div>
+    <p class="cat-head">🪘 <strong>Yakshagana &amp; Taalamaddale</strong></p>
+    <div class="vgrid">
+      <a href="https://www.youtube.com/watch?v=OgHqGJMvceM" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ತಾಳಮದ್ದಲೆ – ಶಲ್ಯ ಸಾರಥ್ಯ</div><div class="vmeta">Taalamaddale · 7,450 views</div></div></a>
+      <a href="https://www.youtube.com/watch?v=mztack5zgeU" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ಸಂಪೂರ್ಣ ರಾಮಾಯಣ</div><div class="vmeta">Yakshagana · 2023–24</div></div></a>
+      <a href="https://www.youtube.com/watch?v=txAi6nmm2a8" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ಯಕ್ಷಗಾನ – ಕಂಸ ವಧೆ</div><div class="vmeta">Yakshagana · 2023–24</div></div></a>
+      <a href="https://www.youtube.com/watch?v=vxjnOhYYQwI" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ನೀನಾಸಮ್ ಯಕ್ಷಗಾನ – ದ್ರೌಪದೀ ಪ್ರತಾಪ</div><div class="vmeta">Yakshagana · 2024–25</div></div></a>
+      <a href="https://www.youtube.com/watch?v=vqsnsrOFQn0" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ತಾಳಮದ್ದಲೆ – ಕೃಷ್ಣ ಸಂಧಾನ</div><div class="vmeta">Taalamaddale · 2024–25</div></div></a>
+      <a href="https://www.youtube.com/watch?v=aikxumclQ1U" target="_blank" class="vcard"><div class="vico vico-p">🪘</div><div><div class="vtit">ತಾಳಮದ್ದಳೆ – ರುಕ್ಮಿಣೀ ಕಲ್ಯಾಣ</div><div class="vmeta">Taalamaddale · 2022–23</div></div></a>
+    </div>
+    <p class="cat-head">🎵 <strong>Classical Music</strong></p>
+    <div class="vgrid">
+      <a href="https://www.youtube.com/watch?v=KCP_hjov67E" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">Carnatic Vocal – T.M. Krishna</div><div class="vmeta">Carnatic · Mar 2023</div></div></a>
+      <a href="https://www.youtube.com/watch?v=bEFX6YTVIF4" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">Hindustani Vocal – Rahul Deshpande (Pt. 2)</div><div class="vmeta">Hindustani · Mar 2023</div></div></a>
+      <a href="https://www.youtube.com/watch?v=frWk6bTKYSg" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">Hindustani Vocal – Rahul Deshpande (Pt. 1)</div><div class="vmeta">Hindustani · Mar 2023</div></div></a>
+      <a href="https://www.youtube.com/watch?v=EdR5cnCeUEs" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">Hindustani Vocal – Vasudha Sharma</div><div class="vmeta">Hindustani · 2022</div></div></a>
+      <a href="https://www.youtube.com/watch?v=-0cdYL7MftA" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">Carnatic Vocal – Anitha Venkatesh</div><div class="vmeta">Carnatic · Sep 2022</div></div></a>
+      <a href="https://www.youtube.com/watch?v=p4KxEpc4Y_A" target="_blank" class="vcard"><div class="vico vico-v">🎵</div><div><div class="vtit">ಹಾರ್ಮೋನಿಯಮ್ ಸೋಲೋ – ಪಂ. ರವೀಂದ್ರ ಕಾಟೋಟಿ</div><div class="vmeta">Classical · 2024–25</div></div></a>
+    </div>
+    <p class="cat-head">🎓 <strong>Lectures &amp; Cultural Discourse</strong></p>
+    <div class="vgrid">
+      <a href="https://www.youtube.com/watch?v=VnxdLnjn9gc" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">URA Memorial Lecture – Pratap Bhanu Mehta</div><div class="vmeta">Lecture · Dec 2022</div></div></a>
+      <a href="https://www.youtube.com/watch?v=1K_vSECqRB8" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">T.M. Krishna – ಕಲಾವಿದನಲ್ಲಿ ಖಾಸಗಿತನ</div><div class="vmeta">Lecture · 2023–24</div></div></a>
+      <a href="https://www.youtube.com/watch?v=UKF5WGg_ebg" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">ನೋಡುವ ಕಲೆ – Sundar Sarukkai</div><div class="vmeta">Lecture · 2024–25</div></div></a>
+      <a href="https://www.youtube.com/watch?v=4KsvqRzg-gI" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">ಕನ್ನಡದಲ್ಲಿ ಶೇಕ್‌ಸ್ಪಿಯರ್</div><div class="vmeta">Lecture · 2024–25</div></div></a>
+      <a href="https://www.youtube.com/watch?v=iHBo6PmHYzA" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">ಗಾಂಧಿಯನ್ನು ಯಾರು ದ್ವೇಷಿಸುತ್ತಾರೆ?</div><div class="vmeta">Lecture · 2024–25</div></div></a>
+      <a href="https://www.youtube.com/watch?v=KYtscdm2qzQ" target="_blank" class="vcard"><div class="vico vico-g">🎓</div><div><div class="vtit">ಪ್ರಾಸ್ತಾವಿಕ ನುಡಿಗಳು – U.R. Ananthamurthy</div><div class="vmeta">Lecture · 2023–24</div></div></a>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <a href="https://www.youtube.com/c/SanchiFoundationOnline/" target="_blank" class="btn-r" style="display:inline-block;">View All 126 Videos on YouTube →</a>
+    </div>
+    <div style="margin-top:64px;">
+      <span class="label label-r">Featured Artists</span>
+      <h3 class="ttl" style="font-size:1.45rem;">Documented for Posterity</h3>
+      <div class="artist-wall">
+        <span class="apill">T.M. Krishna</span><span class="apill">Rahul Deshpande</span>
+        <span class="apill">Pratap Bhanu Mehta</span><span class="apill">U.R. Ananthamurthy</span>
+        <span class="apill">Vasudha Sharma</span><span class="apill">Anitha Venkatesh</span>
+        <span class="apill">Sundar Sarukkai</span><span class="apill">Purnima Bhat Kulkarni</span>
+        <span class="apill">Y.M. Puttannayya</span><span class="apill">Pand. Ravindra Katoti</span>
+        <span class="apill">Krishnamurthy Hanur</span><span class="apill">B.A. Viveka Rai</span>
+        <span class="apill">Naushad &amp; Nishad</span><span class="apill">Jayant Kaikini</span>
+        <span class="apill">C.N. Madhava Bhat</span><span class="apill">Naresh Kirti</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORTALS -->
+<div id="portals" class="portals-bg">
+  <div class="sec wrap">
+    <span class="label label-p">Sanchaya Digital Wing</span>
+    <h2 class="ttl">Open-Access Portals &amp; Archives</h2>
+    <p class="body-txt">Every portal is free, openly licensed, and built for anyone who loves Kannada — literature, culture, history, technology.</p>
+    <div class="pgrid">
+      <div class="pportal">
+        <h3>🏠 Main Portals</h3>
+        <p>Central homes for Sanchi Foundation and Sanchaya, with links to all projects.</p>
+        <div class="llinks">
+          <a href="https://sanchifoundation.org" target="_blank" class="ll ll-r">sanchifoundation.org</a>
+          <a href="https://sanchaya.org" target="_blank" class="ll">sanchaya.org</a>
+          <a href="https://digital.sanchaya.net" target="_blank" class="ll">digital.sanchaya.net</a>
+          <a href="https://sanchaya.github.io" target="_blank" class="ll ll-gh">sanchaya.github.io ↗</a>
+        </div>
+      </div>
+      <div class="pportal">
+        <h3>🔤 Fonts &amp; Language Technology</h3>
+        <p>Reviving historical Kannada typefaces and building open language tools for the digital era.</p>
+        <div class="llinks">
+          <a href="https://fonts.sanchaya.net" target="_blank" class="ll">Fonts Sanchaya</a>
+          <a href="https://pada.sanchaya.net" target="_blank" class="ll">Pada Sanchaya</a>
+          <a href="https://ocr.sanchaya.net" target="_blank" class="ll">OCR Sanchaya</a>
+          <a href="https://kittel.sanchaya.net" target="_blank" class="ll">Kittel Sanchaya</a>
+          <a href="https://isbn.sanchaya.net" target="_blank" class="ll">ISBN Search</a>
+          <a href="https://vachana.sanchaya.net" target="_blank" class="ll">Vachana Sanchaya</a>
+        </div>
+      </div>
+      <div class="pportal">
+        <h3>📚 Author Digital Archives</h3>
+        <p>Personal literary archives of Kannada's most celebrated authors, freely searchable online.</p>
+        <div class="llinks">
+          <a href="https://kvsubbanna.sanchaya.net" target="_blank" class="ll">K.V. Subbanna</a>
+          <a href="https://dsn.sanchaya.net" target="_blank" class="ll">D.S. Nagabhushana</a>
+          <a href="https://kaikini.sanchaya.net" target="_blank" class="ll">Gaurish Kaikini</a>
+          <a href="https://pvn.sanchaya.net" target="_blank" class="ll">P.V. Narayana</a>
+          <a href="https://havanur.sanchaya.net" target="_blank" class="ll">Srinivas Havanur</a>
+          <a href="https://gtn.sanchaya.net" target="_blank" class="ll">G.T. Narayana Rao</a>
+          <a href="https://apmalathi.sanchaya.net" target="_blank" class="ll">A.P. Malathi</a>
+          <a href="https://pavem.sanchaya.net" target="_blank" class="ll">Pavem Acharya</a>
+          <a href="https://oln.sanchaya.net" target="_blank" class="ll">O.L. Nagabhushana</a>
+          <a href="https://bhshridhar.sanchaya.net" target="_blank" class="ll">B.H. Shridhar</a>
+          <a href="https://tranantharamu.sanchaya.net" target="_blank" class="ll">T.R. Anantharamu</a>
+          <a href="https://rvbhandari.sanchaya.net" target="_blank" class="ll">R.V. Bhandari</a>
+        </div>
+      </div>
+      <div class="pportal">
+        <h3>📰 Magazine &amp; Periodical Archives</h3>
+        <p>Beloved Kannada magazines and journals digitised and made permanently accessible.</p>
+        <div class="llinks">
+          <a href="https://kasturi.sanchaya.net" target="_blank" class="ll">Kasturi (50 yrs)</a>
+          <a href="https://maathukathe.sanchaya.net" target="_blank" class="ll">Ninasam Maathukathe</a>
+          <a href="https://bhavana.sanchaya.net" target="_blank" class="ll">Bhavana</a>
+          <a href="https://hosatu.sanchaya.net" target="_blank" class="ll">Hosatu</a>
+          <a href="https://antaranga.sanchaya.net" target="_blank" class="ll">Antaranga</a>
+          <a href="https://hosamanushya.sanchaya.net" target="_blank" class="ll">Hosa Manushya</a>
+          <a href="http://kuthuhali.sanchaya.net" target="_blank" class="ll">Kuthuhali</a>
+          <a href="https://honganasu.sanchaya.net" target="_blank" class="ll">Honganasu</a>
+          <a href="https://kanaka.sanchaya.net" target="_blank" class="ll">Kanaka Vijnana</a>
+          <a href="https://siddhaganga.sanchaya.net" target="_blank" class="ll">Siddhaganga</a>
+          <a href="https://kaanana.sanchaya.net" target="_blank" class="ll">Kaanana</a>
+          <a href="https://ondanemaale.sanchaya.net" target="_blank" class="ll">Ondane Maale</a>
+        </div>
+      </div>
+      <div class="pportal">
+        <h3>🏛️ Special &amp; Institutional Archives</h3>
+        <p>Partnering with institutions to bring historical collections permanently online.</p>
+        <div class="llinks">
+          <a href="https://gandhi.sanchaya.net" target="_blank" class="ll">Gandhi Sanchaya</a>
+          <a href="https://yakshagana.sanchaya.net" target="_blank" class="ll">Yakshagana Sanchaya</a>
+          <a href="https://kagga.sanchaya.net" target="_blank" class="ll">Kagga Sanchaya</a>
+          <a href="https://kamat.sanchaya.net" target="_blank" class="ll">Kamat Sanchaya</a>
+          <a href="https://arebashe.sanchaya.net" target="_blank" class="ll">Arebashe Sanchaya</a>
+          <a href="https://konkani.sanchaya.net" target="_blank" class="ll">Konkani Sanchaya</a>
+          <a href="https://tulu.sanchaya.net" target="_blank" class="ll">Tulu Sanchaya</a>
+          <a href="https://ssacc.sanchaya.net" target="_blank" class="ll">SSACC Sanchaya</a>
+        </div>
+      </div>
+      <div class="pportal">
+        <h3>🌐 Publishers, Research &amp; GitHub</h3>
+        <p>Resources for publishers, researchers, and open-source contributors to Kannada digital culture.</p>
+        <div class="llinks">
+          <a href="https://publishers.sanchaya.net" target="_blank" class="ll">Publishers Sanchaya</a>
+          <a href="http://patrike.sanchaya.net" target="_blank" class="ll">Patrika Sanchaya</a>
+          <a href="https://sanchifoundation.org/ninasam-archive/" target="_blank" class="ll ll-r">Ninasam Archive</a>
+          <a href="https://sanchifoundation.org/project/knowledge-series/" target="_blank" class="ll ll-r">Knowledge Series</a>
+          <a href="https://github.com/sanchaya" target="_blank" class="ll ll-gh">github.com/sanchaya ↗</a>
+          <a href="https://github.com/sanchaya/fonts" target="_blank" class="ll ll-gh">Fonts Repo ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTRIBUTION -->
+<div id="contribute" class="contrib-bg">
+  <div class="sec wrap">
+    <span class="label label-m">Get Involved</span>
+    <h2 class="ttl">How You Can Contribute</h2>
+    <div class="contrib-intro">
+      <p class="body-txt">Sanchi Foundation and Sanchaya are built and sustained by a community of people who believe that culture and language deserve a permanent digital home. There are many ways to be part of this work.</p>
+    </div>
+    <div class="contrib-grid">
+      <div class="ccard cc1">
+        <span class="cicon">🤝</span>
+        <h3>Collaborators</h3>
+        <p class="cdesc">Organisations, institutions, and collectives who share content, expertise, or infrastructure — whose work reaches our shared audience more powerfully together.</p>
+        <p class="cwhat">You could bring</p>
+        <ul class="clist">
+          <li>Access to performance recordings or archival material</li>
+          <li>Institutional collections needing a digital home</li>
+          <li>Joint documentation projects or residencies</li>
+          <li>Co-produced research or publications</li>
+        </ul>
+        <a href="https://sanchifoundation.org/contact-us/" target="_blank" class="caction">Collaborate with us →</a>
+      </div>
+      <div class="ccard cc2">
+        <span class="cicon">🌐</span>
+        <h3>Partners</h3>
+        <p class="cdesc">Foundations, CSR programmes, or aligned organisations who support our mission with sustained engagement — formal or informal, project-based or long-term.</p>
+        <p class="cwhat">Partnership could look like</p>
+        <ul class="clist">
+          <li>Funding a specific archive or portal project</li>
+          <li>Co-branding a documentation initiative</li>
+          <li>Technology or infrastructure support</li>
+          <li>Visibility &amp; network amplification</li>
+        </ul>
+        <a href="https://sanchifoundation.org/contact-us/" target="_blank" class="caction">Become a partner →</a>
+      </div>
+      <div class="ccard cc3">
+        <span class="cicon">🏛️</span>
+        <h3>Patrons</h3>
+        <p class="cdesc">Individuals who believe in this mission and choose to sustain it with recurring generosity — named in our archives, acknowledged in our work, part of our story.</p>
+        <p class="cwhat">As a patron you</p>
+        <ul class="clist">
+          <li>Fund ongoing documentation and digitisation work</li>
+          <li>Are acknowledged in project credits</li>
+          <li>Receive updates on projects your support enables</li>
+          <li>Become part of the permanent archive record</li>
+        </ul>
+        <a href="https://sanchifoundation.org/support-us/" target="_blank" class="caction">Become a patron →</a>
+      </div>
+      <div class="ccard cc4">
+        <span class="cicon">🙌</span>
+        <h3>Volunteers</h3>
+        <p class="cdesc">People who give time, skill, and energy — from scanning and tagging to writing, translating, designing, or coding open-source tools for Kannada.</p>
+        <p class="cwhat">Skills we welcome</p>
+        <ul class="clist">
+          <li>Proofreading and transcription in Kannada</li>
+          <li>Web development and open-source contributions</li>
+          <li>Photography, video, and production support</li>
+          <li>Research assistance for literary archives</li>
+        </ul>
+        <a href="https://sanchifoundation.org/contact-us/" target="_blank" class="caction">Volunteer with us →</a>
+      </div>
+      <div class="ccard cc5">
+        <span class="cicon">❤️</span>
+        <h3>Supporters</h3>
+        <p class="cdesc">Anyone who spreads the word, shares our work, cites our archives, or simply keeps coming back to watch, read, and learn. Every visit, every share, matters.</p>
+        <p class="cwhat">Ways to support</p>
+        <ul class="clist">
+          <li>Share videos and portals with your community</li>
+          <li>Cite Sanchaya in academic or journalistic work</li>
+          <li>Follow us on social media and amplify our reach</li>
+          <li>Suggest content or collections we should archive</li>
+        </ul>
+        <a href="https://www.youtube.com/c/SanchiFoundationOnline/" target="_blank" class="caction">Follow &amp; share →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNERS -->
+<div style="background:#fff;padding:72px 0;border-top:1px solid var(--border);">
+  <div class="sec wrap" style="padding-top:0;padding-bottom:0;">
+    <span class="label label-m">Our Ecosystem</span>
+    <h2 class="ttl">Trusted Partners &amp; Supporters</h2>
+    <p class="body-txt">None of this work happens in isolation. We are grateful to the organisations, institutions, and families who make it possible.</p>
+    <div class="pwall">
+      <div class="partner">🎭 Ninasam</div>
+      <div class="partner">🌱 Rain Matter Foundation</div>
+      <div class="partner">🇺🇸 Kannada Sahitya Ranga – USA</div>
+      <div class="partner">🏛️ Karnataka Archaeology Dept</div>
+      <div class="partner">📚 Ramjan Darga Family</div>
+      <div class="partner">✍️ Lakkappa Shirahatti Family</div>
+      <div class="partner">📖 Chennaveera Kanavi Family</div>
+      <div class="partner">🏡 Kadanakuppe Family</div>
+      <div class="partner">💛 Savitha Nagabhushana</div>
+      <div class="partner">🙏 Woodey P Krishna</div>
+      <div class="partner">🌟 H.D. Chandrappa Gowda Family</div>
+      <div class="partner">💙 Dr. Keshava Sharma</div>
+      <div class="partner">🌼 H.V. Venkatasubbaiah &amp; Family</div>
+      <div class="partner">❤️ Marakini Family</div>
+      <div class="partner">✨ &amp; many more</div>
+    </div>
+  </div>
+</div>
+
+<!-- DONATE -->
+<div id="donate" class="donate-bg">
+  <div class="donate-inner">
+    <span class="label">Support Our Work</span>
+    <h2>Help Us Preserve What<br>Cannot Be Replaced</h2>
+    <p>India's cultural heritage is not fragile — but it is finite. Every performance undocumented, every archive undigitised, is a permanent loss. Your support funds the people and infrastructure that prevent that.</p>
+    <div class="dbtns">
+      <a href="https://sanchifoundation.org/support-us/" target="_blank" class="btn-r">💳 Donate to Sanchi Foundation</a>
+      <a href="https://sanchaya.org/support-us/" target="_blank" class="btn-p">💳 Support Sanchaya</a>
+      <a href="https://sanchifoundation.org/contact-us/" target="_blank" class="btn-ow">Partner With Us</a>
+    </div>
+    <p class="donate-note">🔒 Secure payment via Razorpay · 80G tax exemption applicable</p>
+    <p class="donate-note" style="margin-top:6px;">All content under Creative Commons Attribution 4.0 · Free and open forever</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="fbrand">
+      <div class="footer-logos">
+        <img src="https://sanchifoundation.org/storage/2021/03/sanchi-logo-transparent.png" alt="Sanchi Foundation">
+        <div class="footer-logo-sep"></div>
+        <img src="https://sanchaya.org/storage/2022/07/Artboard-2.png" alt="Sanchaya">
+      </div>
+      <p>Sanchi Foundation (est. 2014) &amp; Sanchaya (est. 2010) preserve Karnataka's cultural and literary heritage through digital technology — freely and forever.</p>
+    </div>
+    <div>
+      <h4>Sanchi Foundation</h4>
+      <ul>
+        <li><a href="https://sanchifoundation.org/about-sanchi/" target="_blank">About Sanchi</a></li>
+        <li><a href="https://sanchifoundation.org/ninasam-archive/" target="_blank">Ninasam Archive</a></li>
+        <li><a href="https://sanchifoundation.org/project/knowledge-series/" target="_blank">Knowledge Series</a></li>
+        <li><a href="https://sanchifoundation.org/support-us/" target="_blank">Support Us</a></li>
+        <li><a href="https://sanchifoundation.org/contact-us/" target="_blank">Contact</a></li>
+        <li><a href="https://www.youtube.com/c/SanchiFoundationOnline/" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Sanchaya</h4>
+      <ul>
+        <li><a href="https://sanchaya.org" target="_blank">sanchaya.org</a></li>
+        <li><a href="https://sanchaya.github.io" target="_blank">sanchaya.github.io</a></li>
+        <li><a href="https://fonts.sanchaya.net" target="_blank">Fonts Sanchaya</a></li>
+        <li><a href="https://digital.sanchaya.net" target="_blank">Digital Archive</a></li>
+        <li><a href="https://kasturi.sanchaya.net" target="_blank">Kasturi Archive</a></li>
+        <li><a href="https://sanchaya.org/support-us/" target="_blank">Support Sanchaya</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://facebook.com/sanchifoundation" target="_blank">Facebook (Sanchi)</a></li>
+        <li><a href="https://twitter.com/sanchispeak" target="_blank">X / Twitter (Sanchi)</a></li>
+        <li><a href="https://facebook.com/kannadasanchaya" target="_blank">Facebook (Sanchaya)</a></li>
+        <li><a href="https://twitter.com/_sanchaya" target="_blank">X / Twitter (Sanchaya)</a></li>
+        <li><a href="https://github.com/sanchaya" target="_blank">GitHub (Sanchaya)</a></li>
+        <li><a href="https://www.youtube.com/c/SanchiFoundationOnline/" target="_blank">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2022–2025 Sanchi Foundation &amp; Sanchaya · Content under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></span>
+    <span>Annual Report 2022–2025 · <a href="https://sanchifoundation.org" target="_blank">sanchifoundation.org</a> · <a href="https://sanchaya.org" target="_blank">sanchaya.org</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

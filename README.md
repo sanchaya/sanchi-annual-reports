@@ -2,17 +2,6 @@
 
 A co-branded, single-page annual report designed for funders, partners, and supporters.
 
-## 🚀 Hosting on GitHub Pages (3 steps)
-
-1. **Create a new GitHub repository** — name it `annual-report` (or anything you like)
-2. **Upload `index.html`** to the root of the repository
-3. **Enable GitHub Pages**: Go to `Settings → Pages → Source → Deploy from branch → main → / (root)` → Save
-
-Your report will be live at:
-```
-https://<your-github-username>.github.io/annual-report/
-```
-
 ## 📁 Files
 
 | File | Purpose |

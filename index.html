@@ -232,6 +232,17 @@ hr.div{border:none;border-top:1px solid var(--border);max-width:1100px;margin:0 
 .btn-p:hover{opacity:.88;transform:translateY(-2px);}
 .btn-ow{border:1px solid rgba(255,255,255,.28);color:rgba(255,255,255,.72);font-size:.92rem;padding:15px 32px;border-radius:100px;text-decoration:none;transition:all .22s;}
 .btn-ow:hover{border-color:#fff;color:#fff;}
+/* OPEN PHILOSOPHY */
+.openphil{background:linear-gradient(135deg,#1A0A2E 0%,#0D1A0A 50%,#0A1520 100%);border-top:1px solid rgba(109,40,217,.2);border-bottom:1px solid rgba(109,40,217,.2);}
+.openphil-inner{display:grid;grid-template-columns:1fr 1.7fr;gap:64px;align-items:start;}
+.opills{display:flex;flex-direction:column;gap:12px;}
+.opill{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px 20px;transition:background .2s;}
+.opill:hover{background:rgba(255,255,255,.07);}
+.oico{font-size:1.5rem;flex-shrink:0;margin-top:1px;}
+.opill strong{display:block;color:#fff;font-size:.92rem;margin-bottom:4px;}
+.opill span{font-size:.82rem;color:rgba(255,255,255,.42);line-height:1.55;}
+.rzp-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.rzp-label{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);}
 .donate-note{margin-top:14px;font-size:.76rem;color:rgba(255,255,255,.28);}
 
 /* ── FOOTER ── */
@@ -589,6 +600,57 @@ footer ul li a:hover{color:var(--red);}
   </div>
 </div>
 
+<!-- OPEN PHILOSOPHY -->
+<div class="openphil">
+  <div class="wrap" style="padding:80px 48px;">
+    <div class="openphil-inner">
+      <div>
+        <span class="label" style="color:#A78BFA;">Our Guiding Principles</span>
+        <h2 class="ttl" style="color:#fff;">Built on Openness</h2>
+        <p class="body-txt" style="color:rgba(255,255,255,.48);">Everything we create — recordings, archives, fonts, portals — is freely available to anyone, forever. We believe knowledge belongs to people, not institutions. These principles are not aspirational; they are structural.</p>
+        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" style="display:inline-block;margin-top:24px;font-size:.78rem;font-weight:600;color:#A78BFA;text-decoration:none;border:1px solid rgba(167,139,250,.3);padding:8px 18px;border-radius:100px;transition:all .2s;">View CC BY 4.0 Licence →</a>
+      </div>
+      <div class="opills">
+        <div class="opill">
+          <span class="oico">⚖️</span>
+          <div>
+            <strong>Open Licensing</strong>
+            <span>All content is published under Creative Commons Attribution 4.0 — share it, adapt it, build on it, as long as you credit the source.</span>
+          </div>
+        </div>
+        <div class="opill">
+          <span class="oico">💻</span>
+          <div>
+            <strong>Open Source</strong>
+            <span>Our tools, fonts, and code are published on GitHub under open licences — available for anyone to use, fork, and improve.</span>
+          </div>
+        </div>
+        <div class="opill">
+          <span class="oico">📖</span>
+          <div>
+            <strong>Open Knowledge</strong>
+            <span>Every archive is freely searchable — no paywalls, no logins, no institutional subscriptions required. Ever.</span>
+          </div>
+        </div>
+        <div class="opill">
+          <span class="oico">🔓</span>
+          <div>
+            <strong>Open Access</strong>
+            <span>Every portal and every recording is available to anyone with an internet connection — scholar, student, or curious reader.</span>
+          </div>
+        </div>
+        <div class="opill">
+          <span class="oico">🎓</span>
+          <div>
+            <strong>Open Education</strong>
+            <span>Our resources are usable in classrooms, research papers, and cultural programmes — in Karnataka, across India, and worldwide.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- CONTRIBUTION -->
 <div id="contribute" class="contrib-bg">
   <div class="sec wrap">
@@ -700,8 +762,14 @@ footer ul li a:hover{color:var(--red);}
     <h2>Help Us Preserve What<br>Cannot Be Replaced</h2>
     <p>India's cultural heritage is not fragile — but it is finite. Every performance undocumented, every archive undigitised, is a permanent loss. Your support funds the people and infrastructure that prevent that.</p>
     <div class="dbtns">
-      <a href="https://sanchifoundation.org/support-us/" target="_blank" class="btn-r">💳 Donate to Sanchi Foundation</a>
-      <a href="https://sanchaya.org/support-us/" target="_blank" class="btn-p">💳 Support Sanchaya</a>
+      <div class="rzp-wrap">
+        <p class="rzp-label">Sanchi Foundation</p>
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_FWuN2M0KxO21fD" async></script></form>
+      </div>
+      <div class="rzp-wrap">
+        <p class="rzp-label">Sanchaya</p>
+        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_KqypzCAy8ulmcV" async></script></form>
+      </div>
       <a href="https://sanchifoundation.org/contact-us/" target="_blank" class="btn-ow">Partner With Us</a>
     </div>
     <p class="donate-note">🔒 Secure payment via Razorpay · 80G tax exemption applicable</p>
@@ -760,5 +828,11 @@ footer ul li a:hover{color:var(--red);}
   </div>
 </footer>
 
+<script>
+document.querySelectorAll('a[href^="http"]').forEach(function(a){
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener noreferrer');
+});
+</script>
 </body>
 </html>
